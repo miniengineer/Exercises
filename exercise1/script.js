@@ -1,8 +1,6 @@
-
-
-function getMeName(name) {
+function question(name) {
   var result = prompt(name);
   alert("Hello there, " + result);
 }
 
-getMeName ("Can I have your name please?")
+question ("Can I have your name please?")
