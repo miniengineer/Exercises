@@ -7,7 +7,7 @@ function sum(number) {
     result += number;
     number--;
   }
-  alert(result);
+  return result;
 }
 
 function product(number) {
@@ -16,14 +16,14 @@ function product(number) {
     result *= number;
     number--;
   }
-  alert(result);
+  return result;
 }
 
 function question() {
 if(choice == "sum") {
-  sum(number);
+  alert(sum(number));
 } else if (choice == "product") {
-  product(number);
+  alert(product(number));
   } else {
     alert("English, motherfucker, DO YOU SPEAK IT?")
     }
