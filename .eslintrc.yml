@@ -52,6 +52,7 @@ rules:
     - error
   space-before-function-paren:
     - error
+    - never
   space-before-blocks:
     - error
   space-in-parens:
