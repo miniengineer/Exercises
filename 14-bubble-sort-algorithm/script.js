@@ -1,5 +1,4 @@
-//Write bubble sort algorithm
-debugger;
+//Write sorting algorithm
 
 function bubbleSort(array) {
   var counter = 1;
@@ -16,5 +15,3 @@ function bubbleSort(array) {
   }
   return array;
 }
-
-console.log(bubbleSort([1,3,2,5,6,8]));
