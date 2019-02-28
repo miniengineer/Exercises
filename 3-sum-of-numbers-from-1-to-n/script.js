@@ -8,4 +8,4 @@ function numberRequest() {
   return(result);
 }
 
-alert(numberRequest())
+alert(numberRequest());

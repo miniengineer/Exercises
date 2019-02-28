@@ -13,3 +13,5 @@ function solution(array,sum) {
   }
   return false;
 }
+
+solution([3,1,2,5,6],6);

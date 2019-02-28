@@ -6,10 +6,8 @@ printing all primes up to the largest number you can easily represent is fine to
 // function 2 - writes down <any value> into a list
 // function 3 - the solution for this exercise
 
-
-
 function isPrime(number) {
-  if(number == 2) {               //I assume that primeNumberFormula will eliminate all even numbers, but 2 is a prime number, so I added this as the first condition
+  if(number === 2) {               //I assume that primeNumberFormula will eliminate all even numbers, but 2 is a prime number, so I added this as the first condition
     return true;
   } else if(number % 2 > 0) {
     var counter = 3;
@@ -18,7 +16,7 @@ function isPrime(number) {
         return false;
       }
       counter++;
-     }
+    }
     return true;
   } else {
     return false;
@@ -34,3 +32,5 @@ function listAllPrimes(number1, number2) {
     number1++;
   }
 }
+
+listAllPrimes(1,100);

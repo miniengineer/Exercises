@@ -9,3 +9,5 @@ function largestNumber(array) {
   }
   return maxForNow;
 }
+
+largestNumber([3,6,1,2,9,11]);
