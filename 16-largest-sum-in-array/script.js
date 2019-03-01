@@ -56,3 +56,5 @@ function getArrayMaxSum(array) {
   var sum = array[0] + array[1];
   return sum;
 }
+
+getArrayMaxSum([4,12,6,82,12,5]);
