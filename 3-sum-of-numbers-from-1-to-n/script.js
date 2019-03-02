@@ -1,11 +1,11 @@
-function numberRequest() {
-  var enterNumber = Number(prompt("Can you pick a number?"));
+function sumOfN(number) {
   var result = 1;
-  while(enterNumber > 0) {
-    result += enterNumber;
-    enterNumber--;
+  while(number > 0) {
+    result += number;
+    number--;
   }
   return(result);
 }
 
-alert(numberRequest());
+var enterNumber = Number(prompt("Can you pick a number?"));
+alert(sumOfN(enterNumber));

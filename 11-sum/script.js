@@ -1,3 +1,6 @@
+/**
+ * Get pair of numbers that gives you a target sum,
+ */
 function solution(array,sum) {
   var i = 0;
   var number;
