@@ -20,14 +20,13 @@ function product(number) {
 }
 
 function question() {
-if(choice == "sum") {
-  alert(sum(number));
-} else if (choice == "product") {
-  alert(product(number));
+  if(choice === "sum") {
+    alert(sum(number));
+  } else if (choice === "product") {
+    alert(product(number));
   } else {
-    alert("English, motherfucker, DO YOU SPEAK IT?")
-    }
-
+    alert("English, motherfucker, DO YOU SPEAK IT?");
+  }
 }
 
 question();

@@ -26,4 +26,4 @@ function giveLongestWord(str) {
 }
 
 
-// giveLongestWord("I love cookies");
+giveLongestWord("I love cookies");

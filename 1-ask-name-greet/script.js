@@ -3,4 +3,4 @@ function question(name) {
   alert("Hello there, " + result);
 }
 
-question ("Can I have your name please?")
+question("Can I have your name please?");

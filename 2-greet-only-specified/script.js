@@ -1,6 +1,6 @@
 function askTheName(question) {
-  var name = prompt(name);
-  if (name == "Alice" || name == "Bob") {
+  var name = prompt(question);
+  if (name === "Alice" || name === "Bob") {
     name += "!";
     alert("I have been waiting for you, " + name);
   } else {
@@ -8,4 +8,4 @@ function askTheName(question) {
   }
 }
 
-askTheName ("Can I have your name please?");
+askTheName("Can I have your name please?");
