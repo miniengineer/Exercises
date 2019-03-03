@@ -1,10 +1,10 @@
 //Write Selection sort algorithm
 
 function swap(array,index1,index2) {
- var memo = array[index1];
- array[index1] = array[index2];
- array[index2] = memo;
- return array;
+  var memo = array[index1];
+  array[index1] = array[index2];
+  array[index2] = memo;
+  return array;
 }
 
 function selectionSort(array) {
