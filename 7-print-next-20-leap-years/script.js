@@ -1,11 +1,12 @@
 // Write a program that prints the next 20 leap years.
 
-
 function leapYearList(lastLeapYear) {
+  var array = [];
   while(lastLeapYear < 2100) {
     lastLeapYear += 4;
-    document.write(lastLeapYear + "\n");
+    array.push("\n" + lastLeapYear);
   }
+  return array;
 }
 
-leapYearList(2016);
+document.write(leapYearList(2016));

@@ -1,16 +1,16 @@
 /** Modify the previous program such that only multiples of three or five are considered in the sum,
  e.g. 3, 5, 6, 9, 10, 12, 15 for n=17 **/
 
-function numberRequest() {
-  var enterNumber = Number(prompt("Can you pick a number?"));
+function sumOfThreeOrFive(number) {
   var result = 1;
-  while(enterNumber > 0) {
-    if (enterNumber % 3 === 0 || enterNumber % 5 === 0) {
-      result += enterNumber;
+  while(number > 0) {
+    if (number % 3 === 0 || number % 5 === 0) {
+      result += number;
     }
-    enterNumber--;
+    number--;
   }
-  return(result);
+  return result;
 }
 
-alert(numberRequest());
+var enterNumber = Number(prompt("Can you pick a number?"));
+document.write(sumOfThreeOrFive(enterNumber));

@@ -2,17 +2,13 @@
  * Get pair of numbers that gives you a target sum,
  */
 function solution(array,sum) {
-  var i = 0;
   var number;
-  while(i < array.length) {
-    number = i + 1;
-    while(number < array.length) {
+  for(var i = 0; i < array.length; i++) {
+    for(number = i + 1; number < array.length; number++) {
       if(array[i] + array[number] === sum) {
-        return {fisrtPos: i, secondPosition: number};
+        return {firstPos: i, secondPos: number};
       }
-      number++;
     }
-    i++;
   }
   return false;
 }

@@ -1,15 +1,14 @@
 //Write Selection sort algorithm
 
-function swap(array,a,b,c) {
-  var memo = array[b];
-  array[b] = a;
-  array[c] = memo;
-  return array;
+function swap(array,index1,index2) {
+ var memo = array[index1];
+ array[index1] = array[index2];
+ array[index2] = memo;
+ return array;
 }
 
 function selectionSort(array) {
-  var circleNumber = 0;
-  while(circleNumber < array.length) {
+  for(var circleNumber = 0; circleNumber < array.length; circleNumber++) {
     var i = circleNumber;
     var minForNow = 100;
     var index = 0;
@@ -19,10 +18,9 @@ function selectionSort(array) {
         minForNow = array[i];
       }
     }
-    swap(array,minForNow,circleNumber,index);
-    circleNumber++;
+    swap(array,circleNumber,index);
   }
   return array;
 }
 
-selectionSort([6,4,3,8,1]);
+selectionSort([4,3,1,2]);
