@@ -12,14 +12,11 @@
 // Output:40320
 
 function firstFactorial(num) {
-  var array = [];
+  var factorial = num;
   for(var i = 1; i < num; i++) {
-    array.push(num - i);
+    factorial *= (num - i);
   }
-  for(i = 0; i < array.length; i++) {
-    num *= array[i];
-  }
-  return num;
+  return factorial;
 }
 
-firstFactorial(8);
+console.log(firstFactorial(4));
