@@ -16,7 +16,7 @@ function firstFactorial(num) {
   for(var i = 1; i < num; i++) {
     array.push(num - i);
   }
-  for(var i = 0; i < array.length; i++) {
+  for(i = 0; i < array.length; i++) {
     num *= array[i];
   }
   return num;
