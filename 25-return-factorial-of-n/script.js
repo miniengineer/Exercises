@@ -19,4 +19,4 @@ function firstFactorial(num) {
   return factorial;
 }
 
-console.log(firstFactorial(4));
+firstFactorial(4);
