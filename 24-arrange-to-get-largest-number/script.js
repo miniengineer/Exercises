@@ -8,8 +8,6 @@
 // 123456
 // Input: 1254859723 Output: 9875543221
 
-debugger;
-
 function makeLargest(number) {
   var str = number.toString();
   str = str.split("").sort();
@@ -21,4 +19,4 @@ function makeLargest(number) {
   return array;
 }
 
-console.log(makeLargest(35830983));
+makeLargest(35830983);
