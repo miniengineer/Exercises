@@ -24,31 +24,26 @@
 
 function isEven(word) {
   if (word.length % 2 !== 0) {
-    return "odd";
+    return true;
   } else {
-    return "even";
+    return false;
   }
 }
 
 function getMiddle(string) {
   var index = 0;
-  var result = [];
-  var array = [];
-  if(isEven(string) === "odd") {
-    array = string.split("");
-    index = array.length / 2 - 0.5;
-    result =  array.splice(index,1);
-    result = result.join("");
+  var result = "";
+  if(isEven(string) === false) {
+    index = Math.ceil(string.length / 2) + 1;
+    result = string.substring(index - 2,index);
     return result;
-  } else if (isEven(string) === "even") {
-    array = string.split("");
-    index = array.length / 2 - 1;
-    result = array.splice(index,2);
-    result = result.join("");
+  } else if (isEven(string) === true) {
+    index = Math.ceil(string.length / 2) - 1;
+    result = string.substring(index, index + 1);
     return result;
   } else {
     return string;
   }
 }
 
-getMiddle("Minira");
+getMiddle("capital");
