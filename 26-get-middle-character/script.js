@@ -31,19 +31,18 @@ function isEven(word) {
 }
 
 function getMiddle(string) {
-  var index = 0;
-  var result = "";
-  if(isEven(string) === false) {
-    index = Math.ceil(string.length / 2) + 1;
-    result = string.substring(index - 2,index);
-    return result;
-  } else if (isEven(string) === true) {
-    index = Math.ceil(string.length / 2) - 1;
-    result = string.substring(index, index + 1);
-    return result;
-  } else {
+  if (string.length < 2) {
     return string;
   }
+  var endPos = 0;
+  var startPos = Math.ceil(string.length / 2 - 1);
+  if (isEven(string) === false) {
+    endPos = startPos + 2;
+  }
+  else {
+    endPos = startPos + 1;
+  }
+  return string.substring(startPos,endPos);
 }
 
-getMiddle("capital");
+console.log(getMiddle("capital"));
