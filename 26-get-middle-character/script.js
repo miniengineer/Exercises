@@ -38,8 +38,7 @@ function getMiddle(string) {
   var startPos = Math.ceil(string.length / 2 - 1);
   if (isEven(string) === false) {
     endPos = startPos + 2;
-  }
-  else {
+  } else {
     endPos = startPos + 1;
   }
   return string.substring(startPos,endPos);
