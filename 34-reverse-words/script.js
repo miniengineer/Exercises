@@ -11,11 +11,10 @@
 // spinWords( "This is another test" )=> returns "This is rehtona test"
 
 function spinWords(string) {
-  var memo = [];
   var array = string.split(" ");
   for (var i = 0; i < array.length; i++) {
     if (array[i].length > 4) {
-      memo = array[i].split("").reverse().join("");
+      var memo = array[i].split("").reverse().join("");
       array[i] = memo;
     }
   }
