@@ -1,9 +1,9 @@
-function swap(array,index1,index2) {
-  var memo = array[index1];
-  array[index1] = array[index2];
-  array[index2] = memo;
-  return array;
-}
+// function swap(array,index1,index2) {
+//   var memo = array[index1];
+//   array[index1] = array[index2];
+//   array[index2] = memo;
+//   return array;
+// }
 
 // function bubbleSort(array) {
 //   while(true) { // eslint-disable-line
@@ -20,28 +20,6 @@ function swap(array,index1,index2) {
 //   }
 // }
 
-
-var products = [
-  {
-    productName: "Strawberry",
-    price: 900
-  },
-  {
-    productName: "Beer",
-    price: 225
-  },
-  {
-    productName: "Udon",
-    price: 400
-  },
-  {
-    productName: "Prime Beef Rib Eye Steak 800gr",
-    price: 5000
-  }
-];
-
-//
-//
 // function bubbleSort(array,comparisonFunc) {
 //   while(true) { // eslint-disable-line
 //     var circle = 0;
@@ -108,5 +86,5 @@ var products = [
 // }));
 
 console.log(products.find(function(a) {
-    return a.discount > 60;
+  return a.discount > 60;
 }));
