@@ -11,14 +11,19 @@
 //
 // These letters are vowels in English: A, E, I, O, U
 
+// function deleteVowels(string) {
+//   var array = ["a","A","E","e","I","i","O","o","U","u"];
+//   var result = "";
+//   for (var i = 0; i < string.length; i++) {
+//     if (array.includes(string[i]) === false) {
+//       result += string[i];
+//     }
+//   }
+//   return result;
+// }
+
 function deleteVowels(string) {
-  var array = ["a","A","E","e","I","i","O","o","U","u"];
-  var result = "";
-  for (var i = 0; i < string.length; i++) {
-    if (array.includes(string[i]) === false) {
-      result += string[i];
-    }
-  }
+  var result = string.replace(/[aeiou]/gi,"");
   return result;
 }
 
