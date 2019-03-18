@@ -21,7 +21,7 @@
 
 
 function maskify(string) {
-  if (string === "" || string.length < 2) {
+  if (string.length < 5) {
     return string;
   }
   var array = string.split("");
