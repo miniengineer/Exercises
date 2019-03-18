@@ -13,18 +13,21 @@
 // (Use the English alphabet with 26 letters!)
 //
 
-['a','b','c','d','f']
-
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var alphabetUpper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
 function isMatch (array) {
+  if (array[0] === array[0].toUpperCase()) {
+    alphabet = alphabetUpper;
+  }
   var i = alphabet.indexOf(array[0]);
-  var end = alphabet.indexOf(array[array.length]);
   var index = 0;
-  for(i; i < end; i++) {
+  for (i; index < array.length; i++) {
     if (alphabet[i] !== array[index]) {
-      return array[i];
+      return array[index];
     }
     index++;
   }
 }
+
+console.log(isMatch(['A','B','C','D','F']));
