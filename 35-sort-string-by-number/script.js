@@ -29,4 +29,4 @@ function sortByNumber(string) {
   return array;
 }
 
-sortByNumber("4of Fo13r pe6ople g3ood th5e the2");
+sortByNumber("4of Fo13r pe6ople g3ood th5e the7");
