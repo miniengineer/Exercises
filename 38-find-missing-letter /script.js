@@ -13,12 +13,11 @@
 // (Use the English alphabet with 26 letters!)
 //
 
-var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-var alphabetUpper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 function isMatch(array) {
+  var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   if (array[0] === array[0].toUpperCase()) {
-    alphabet = alphabetUpper;
+    alphabet = alphabet.toUpperCase;
   }
   var i = alphabet.indexOf(array[0]);
   var index = 0;
