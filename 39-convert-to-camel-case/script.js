@@ -7,15 +7,21 @@
 // toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
 
 
-function convertToCamelCase(string) {
-  var regex = /(?<=[-])[a-z]/;
-  while (string.search(/[-]/) !== -1) {
-    var lowerCase = string[string.search(regex)];
-    var upperCase = string[string.search(regex)].toUpperCase();
-    string = string.replace(lowerCase,upperCase);
-    string = string.replace(/[-]/,"");
-  }
-  return string;
+// function convertToCamelCase(string) {
+//   var regex = /(?<=[-])[a-z]/;
+//   while (string.search(/[-]/) !== -1) {
+//     var lowerCase = string[string.search(regex)];
+//     var upperCase = string[string.search(regex)].toUpperCase();
+//     string = string.replace(lowerCase,upperCase);
+//     string = string.replace(/[-]/,"");
+//   }
+//   return string;
+// }
+
+function toCamelCase(string) {
+  return string.replace(/-([a-z])/g, function(match) {
+    return match[1].toUpperCase();
+  });
 }
 
-convertToCamelCase("the-best-warrior");
+console.log(toCamelCase("the-best-warrior"));
