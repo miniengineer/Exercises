@@ -7,11 +7,11 @@
 // toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
 
 
-function convertToCamelCase (string) {
+function convertToCamelCase(string) {
   var regex = /(?<=[-])[a-z]/;
   while (string.search(/[-]/) !== -1) {
     var lowerCase = string[string.search(regex)];
-    var upperCase = string[string.search(regex)].toUpperCase()
+    var upperCase = string[string.search(regex)].toUpperCase();
     string = string.replace(lowerCase,upperCase);
     string = string.replace(/[-]/,"");
   }
