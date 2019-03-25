@@ -21,4 +21,4 @@ function highestAndLowest(str) {
   return str;
 }
 
-console.log(highestAndLowest("1 9 3 4 -5"))
+highestAndLowest("1 9 3 4 -5");
