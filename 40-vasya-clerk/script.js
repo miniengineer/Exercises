@@ -16,23 +16,30 @@
 // tickets([25, 100])  => NO. Vasya will not have enough money to give change to 100 dollars
 // tickets([25, 25, 50, 50, 100])  => NO. Vasya will not have the right bills to give 75 dollars of change (you can't make two bills of 25 from one of 50)
 
-I need to write a function which gets array as an input
-I would also need to create an object with key and values
-my keys would be bills and values will be number of those bills
+function vasyaClerk(arr) {
+  var object = {twentyFive: 0, fifty: 0};
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i] === 25) {
+      object.twentyFive++;
+    } else if(arr[i] === 50) {
+      if(object.twentyFive > 0) {
+        object.twentyFive--;
+        object.fifty++;
+      } else {
+        return false;
+      }
+    } else if(arr[i] === 100) {
+      if(object.twentyFive > 3 || object.twentyFive > 0 && object.fifty > 0) {
+        object.twentyFive -= 3;
+      } else if(object.twentyFive > 0 && object.fifty > 0) {
+        object.twentyFive--;
+        object.fifty--;
+      } else {
+        return false;
+      }
+    }
+  }
+  return true;
+}
 
-every time when the bill is more than 25 I would need to give a change
-so I would need to search my array for change  (are there bills that in sum give me the current bill?)
-
-function giveChange(array) {
-  var bills = [{twentyFive: 0}, {fifty: 0}];
-  for(var = 0; i < array.length; i++) {
-    if(array[i] == 25) {
-      bills[0].twentyFive++;
-    } else if(array[i] == 50) {
-      bills[0].twentyFive--;
-      bills[1].fifty++;
-    } else {
-      array.forEach( element => bills[0].twentyFive > 3 || bills[0].twentyFive > 0 && bills[1].fifty > 0);
-    };
-  };
-};
+vasyaClerk([25, 50, 50]);
