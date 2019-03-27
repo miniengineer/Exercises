@@ -22,20 +22,20 @@ var fruits = [{type: "banana,orange,apple,lemon,grapes", price: 5}, {type: "avoc
 
 function cupOfJuicePrice(arr) {
   var fruitsLowCase = [];
-  arr.forEach(function(e) {
-    fruitsLowCase.push(e.toLowerCase());
+  fruitsLowCase = arr.map(function(e) {
+    return e.toLowerCase();
   });
   var price = fruitsLowCase.reduce(function(a,b) {
     if(fruits[0].type.includes(b)) {
-      return a += 5;
+      return a += fruits[0].price;
     } else if(fruits[1].type.includes(b)) {
-      return a += 7;
+      return a += fruits[1].price;
     } else {
       return a += 9;
     }
   }, 0);
   price /= fruitsLowCase.length;
-  price = Math.ceil(price);
+  price = Math.floor(price);
   return price;
 }
 
