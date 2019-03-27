@@ -40,4 +40,4 @@ function cupOfJuicePrice(arr) {
   return price;
 }
 
-cupOfJuicePrice(['Mango', 'octopus', 'peach']);
+cupOfJuicePrice(["Mango", "octopus", "peach"]);
