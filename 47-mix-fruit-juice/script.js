@@ -18,20 +18,20 @@
 //
 // ['Mango', 'Banana', 'Avocado'] //the price of this juice bottle is (7+5+7)/3 = $6($6.333333...)
 //
+
+const SpecialFruitPrice = 9;
 var fruits = [{type: "banana,orange,apple,lemon,grapes", price: 5}, {type: "avocado,strawberry,mango", price: 7}];
 
 function cupOfJuicePrice(arr) {
   var fruitsLowCase = [];
-  fruitsLowCase = arr.map(function(e) {
-    return e.toLowerCase();
-  });
+  fruitsLowCase = arr.map(e => e.toLowerCase());
   var price = fruitsLowCase.reduce(function(a,b) {
     if(fruits[0].type.includes(b)) {
       return a += fruits[0].price;
     } else if(fruits[1].type.includes(b)) {
       return a += fruits[1].price;
     } else {
-      return a += 9;
+      return a += SpecialFruitPrice;
     }
   }, 0);
   price /= fruitsLowCase.length;
