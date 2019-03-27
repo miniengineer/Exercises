@@ -20,7 +20,6 @@
 //
 var fruits = [{type: "banana,orange,apple,lemon,grapes", price: 5}, {type: "avocado,strawberry,mango", price: 7}];
 
-
 function cupOfJuicePrice(arr) {
   var fruitsLowCase = [];
   arr.forEach(function(e) {
