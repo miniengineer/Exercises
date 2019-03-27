@@ -15,8 +15,7 @@
 function highestAndLowest(str) {
   var array = str.split(" ");
   array.sort();
-  let string = "";
-  string += array[array.length-1] + " ";
+  let string = string += array[array.length-1] + " ";
   string += array[0];
   return string;
 }
