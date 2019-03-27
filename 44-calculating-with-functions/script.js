@@ -28,13 +28,13 @@ function times(number) {
 }
 
 function makeOperand(operand) {
-    return function(calculation) {
-      if(arguments.length < 1) {
-        return operand;
-      } else {
-        return calculation(operand);
-      };
-    };
+  return function(calculation) {
+    if(arguments.length < 1) {
+      return operand;
+    } else {
+      return calculation(operand);
+    }
+  };
 }
 
 times(5);
