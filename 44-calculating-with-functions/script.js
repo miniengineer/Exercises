@@ -37,5 +37,5 @@ function makeOperand(operand) {
   };
 }
 
-times(4);
-makeOperand(4);
+times(5);
+makeOperand(6);
