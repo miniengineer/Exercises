@@ -15,9 +15,7 @@
 function highestAndLowest(str) {
   var array = str.split(" ");
   array.sort();
-  let string = array[array.length-1] + " ";
-  string += array[0];
-  return string;
+  return `${array[array.length-1]} ${array[0]}`;
 }
 
 highestAndLowest("1 9 3 4 -5");
