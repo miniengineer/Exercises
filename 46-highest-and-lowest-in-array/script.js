@@ -15,10 +15,10 @@
 function highestAndLowest(str) {
   var array = str.split(" ");
   array.sort();
-  str = "";
-  str += array[array.length-1] + " ";
-  str += array[0];
-  return str;
+  let string = "";
+  string += array[array.length-1] + " ";
+  string += array[0];
+  return string;
 }
 
 highestAndLowest("1 9 3 4 -5");
