@@ -24,7 +24,7 @@
 // All data will always be valid and uniform as in the example above.
 
 function whoIsFromEurope(array) {
-  let result = array.reduce(function(a,b) {
+  let result = array.reduce((a,b) => {
     if(b.continent === "Europe" && b.language === "JavaScript") {
       return a = a + 1;
     } else {
@@ -34,11 +34,11 @@ function whoIsFromEurope(array) {
   return result;
 }
 
-list1 = [
-  { first_name: 'Noah', last_name: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'JavaScript' },
-  { first_name: 'Maia', last_name: 'S.', country: 'Tahiti', continent: 'Oceania', age: 28, language: 'JavaScript' },
-  { first_name: 'Shufen', last_name: 'L.', country: 'Taiwan', continent: 'Asia', age: 35, language: 'HTML' },
-  { first_name: 'Sumayah', last_name: 'M.', country: 'Tajikistan', continent: 'Asia', age: 30, language: 'CSS' }
-]
+var list1 = [
+  { firstName: "Noah", lastName: "M.", country: "Switzerland", continent: "Europe", age: 19, language: "JavaScript" },
+  { firstName: "Maia", lastName: "S.", country: "Tahiti", continent: "Oceania", age: 28, language: "JavaScript" },
+  { firstName: "Shufen", lastName: "L.", country: "Taiwan", continent: "Asia", age: 35, language: "HTML" },
+  { firstName: "Sumayah", lastName: "M.", country: "Tajikistan", continent: "Asia", age: 30, language: "CSS" }
+];
 
 whoIsFromEurope(list1);
