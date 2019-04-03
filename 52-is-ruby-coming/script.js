@@ -22,4 +22,4 @@ function isRubyComing(array) {
   return (array.find(e => e.language === "Ruby") === undefined ? true : false);
 }
 
-console.log(isRubyComing(list1));
+isRubyComing(list1);
