@@ -19,7 +19,7 @@ var list1 = [
 // The input array will always be valid and formatted as in the example above.
 
 function isRubyComing(array) {
-  return (array.find(e => e.language === "Ruby") === undefined ? true : false);
+  return (array.find(e => e.language === "Ruby"));
 }
 
-isRubyComing(list1);
+console.log(isRubyComing(list1));
