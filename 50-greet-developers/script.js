@@ -40,5 +40,4 @@ function addGreeting(array) {
   return result;
 }
 
-console.log(addGreeting(list1));
-console.log(list1);
+addGreeting(list1);
