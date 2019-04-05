@@ -8,7 +8,7 @@
 // For example, given the following input array:
 
 var list1 = [
-  { firstName: "Emma", lastName: "Z.", country: "Netherlands", continent: "Europe", age: 29, language: "Go" },
+  { firstName: "Emma", lastName: "Z.", country: "Netherlands", continent: "Europe", age: 29, language: "Ruby" },
   { firstName: "Piotr", lastName: "B.", country: "Poland", continent: "Europe", age: 128, language: "Python" },
   { firstName: "Jayden", lastName: "P.", country: "Jamaica", continent: "Americas", age: 42, language: "JavaScript" }
 ];
@@ -19,7 +19,7 @@ var list1 = [
 // The input array will always be valid and formatted as in the example above.
 
 function isRubyComing(array) {
-  return (array.find(e => e.language === "Ruby"));
+  return (array.find(e => e.language === "Ruby") !== undefined);
 }
 
-console.log(isRubyComing(list1));
+isRubyComing(list1);
