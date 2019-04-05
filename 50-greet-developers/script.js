@@ -34,9 +34,10 @@ var list1 = [
 ];
 
 function addGreeting(array) {
-  let result = JSON.parse(JSON.stringify(array));
+  let result = _.cloneDeep(array);
   result.forEach(e => e.greeting = `Hi ${e.firstName}, what do you like the most about ${e.language}?`);
   return result;
 }
 
-addGreeting(list1);
+console.log(addGreeting(list1));
+console.log(list1);
