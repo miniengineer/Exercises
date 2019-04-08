@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint --ext js .",
-    "lintfix": "./node_modules/.bin/eslint --ext js . --fix"
+    "lint": "eslint --ext js .",
+    "lintfix": "eslint --ext js . --fix"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "homepage": "https://github.com/miniengineer/Exercises#readme",
   "devDependencies": {
     "eslint": "^5.14.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
   }
 }
