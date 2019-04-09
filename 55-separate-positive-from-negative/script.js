@@ -41,9 +41,28 @@
 // Remember, duplications are included when separating , that's why the number 1 appeared twice at the end of the output.
 
 
-function separatePositiveAndNegative(array) {
-  let arr = [...array];
-  array.forEach(e => {
-    if(e > 0 && )
-  });
+function swap(array,index1,index2) {
+  var memo = array[index1];
+  array[index1] = array[index2];
+  array[index2] = memo;
+  return array;
 }
+
+function orderPositiveIntegers(array) {
+  let arr = [...array];
+  let lastNegativeNumber = 0;
+  let index = 0;
+  arr.forEach((currentInteger,i) => {
+    //check if the currentInteger is positive and there are negative integers after,
+    //so forEach loop would stop once all the positive integers are on the right side
+    if(currentInteger > 0 && !(arr.slice(i+1,arr.length-1).every(e => e > 0))) {
+      lastNegativeNumber = arr.reverse().find(e => e < 0);
+      arr.reverse();
+      index = arr.lastIndexOf(lastNegativeNumber);
+      swap(arr,i,index);
+}
+});
+return arr;
+}
+
+orderPositiveIntegers([-25, 1, -2, -48, -2, 2]);
