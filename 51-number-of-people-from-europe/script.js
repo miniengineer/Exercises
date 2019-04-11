@@ -26,8 +26,7 @@
 function whoIsFromEurope(array) {
   let result = array.reduce((a,b) => {
     if(b.continent === "Europe" && b.language === "JavaScript") {
-      ++a;
-      return a;
+      return a+1;
     } else {
       return a;
     }
