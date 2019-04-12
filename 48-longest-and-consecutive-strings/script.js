@@ -14,16 +14,19 @@
 
 function longestConsec(strarr, k) {
   //edge cases
-  var l = strarr.length;
-  if(l === 0 || k > l || k <= 0) {
+  if(strarr.length === 0 || k > strarr.length || k <= 0) {
     return "";
   }
-  //sort the array
-  var memo = [...strarr];
-  strarr.sort(function compare(a,b) {
+  //copy and sort the array
+  var sameArray = [...strarr];
+  sameArray.sort(function compare(a,b) {
     return a.length < b.length;
   });
-  return `${strarr[0]}`;
+  //get the index of the longest number
+  var longestWordIndex = strarr.indexOf(sameArray[0]);
+  //return result without changing the argument
+  let result = strarr.slice(longestWordIndex,longestWordIndex + k).join("");
+  return result;
 }
 
-console.log(longestConsec(["zone", "abigail", "theta", "form", "alexsander", "zas", "theta", "abigail"], 4));
+longestConsec(["zone", "abigail", "theta", "form", "minirathegreatest", "zas", "theta", "abigail"], 4);
