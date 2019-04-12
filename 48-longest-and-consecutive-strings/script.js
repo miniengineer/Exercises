@@ -20,8 +20,9 @@ function longestConsec(strarr, k) {
   //copy and sort the array
   var sameArray = [...strarr];
   sameArray.sort(function compare(a,b) {
-    return a.length < b.length;
+    return b.length - a.length;
   });
+  console.log(sameArray);
   //get the index of the longest number
   var longestWordIndex = strarr.indexOf(sameArray[0]);
   //return result without changing the argument
@@ -29,4 +30,4 @@ function longestConsec(strarr, k) {
   return result;
 }
 
-longestConsec(["zone", "abigail", "theta", "form", "minirathegreatest", "zas", "theta", "abigail"], 4);
+console.log(longestConsec(["alanrickman", "a", "ab", "acc", "miniraSamadova"], 4));
