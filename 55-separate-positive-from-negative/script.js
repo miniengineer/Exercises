@@ -60,9 +60,9 @@ function orderPositiveIntegers(array) {
       arr.reverse();
       index = arr.lastIndexOf(lastNegativeNumber);
       swap(arr,i,index);
-}
-});
-return arr;
+    }
+  });
+  return arr;
 }
 
 orderPositiveIntegers([-25, 1, -2, -48, -2, 2]);
