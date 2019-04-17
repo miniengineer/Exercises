@@ -8,13 +8,21 @@
 // tailSwap('abc:123', 'cde:456') == ['abc:456', 'cde:123']
 // tailSwap('a:12345', '777:xyz') == ['a:xyz', '777:12345']
 
+//Alternative solution with RegEx:
+// function tailSwap(str1,str2) {
+//   let result = [];
+//   result.push(str1.replace(/:.*/,str2.match(/:.*/)));
+//   result.push(str2.replace(/:.*/,str1.match(/:.*/)));
+//   return result;
+// }
+
 function tailSwap(str1,str2) {
-  let tail1 = str1.slice(str1.indexOf(':'),str1.length);
-  let tail2 = str2.slice(str2.indexOf(':'),str2.length);
+  let tail1 = str1.slice(str1.indexOf(":"),str1.length);
+  let tail2 = str2.slice(str2.indexOf(":"),str2.length);
   let result = [];
   result.push(str1.replace(tail1,tail2));
   result.push(str2.replace(tail2,tail1));
   return result;
 }
 
-tailSwap('abc:123', 'cde:456');
+tailSwap("abc:123", "cde:456");
