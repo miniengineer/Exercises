@@ -17,17 +17,18 @@ function longestConsec(strarr, k) {
   if(strarr.length === 0 || k > strarr.length || k <= 0) {
     return "";
   }
-  //copy and sort the array
-  var sameArray = [...strarr];
-  sameArray.sort(function compare(a,b) {
-    return b.length - a.length;
+  //find the longestWord and its index
+  var longestWord = "";
+  var longestWordIndex = null;
+  strarr.forEach((currentElement,currentIndex) => {
+    if(currentElement.length > longestWord.length) {
+      longestWord = currentElement;
+      longestWordIndex = currentIndex;
+    }
   });
-  console.log(sameArray);
-  //get the index of the longest number
-  var longestWordIndex = strarr.indexOf(sameArray[0]);
-  //return result without changing the argument
+  //find the longtest and join with k consecutive elements
   let result = strarr.slice(longestWordIndex,longestWordIndex + k).join("");
   return result;
 }
 
-console.log(longestConsec(["alanrickman", "a", "ab", "acc", "miniraSamadova"], 4));
+longestConsec(["alanrickman", "miniraSamadova", "a", "ab", "acc"], 3);
