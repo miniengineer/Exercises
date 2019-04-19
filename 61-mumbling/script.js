@@ -14,17 +14,13 @@
 function accum(string) {
   string = string.split("");
   let result = string.reduce((accumulator,currentElement,i) => {
-    if (i === 0) {
-      currentElement = currentElement.toUpperCase();
-      accumulator.push(currentElement);
-    } else {
-      let accumLetter = currentElement.padEnd(i, currentElement);
-      accumLetter = accumLetter[0].toUpperCase().concat(accumLetter);
-      accumulator.push(accumLetter);
-    }
+    let accumLetter = currentElement.padEnd(i, currentElement);
+    accumLetter = accumLetter[0].toUpperCase() + accumLetter;
+    accumulator.push(accumLetter);
     return accumulator;
   }, []).join("-");
   return result;
 }
+
 
 accum("abcd");
