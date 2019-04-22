@@ -15,9 +15,7 @@ function wave(str) {
   let result = [];
   array.forEach((currentElement, currentIndex) => {
     result.push([...str]);
-    if (currentElement === " ") {
-      return " ";
-    } else {
+    if (currentElement !== " ") {
       result[currentIndex][currentIndex] = currentElement.toUpperCase();
     }
   });
