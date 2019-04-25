@@ -17,4 +17,4 @@
 const validatePIN = (string) => /^\d{4}|\d{6}$/.test(string);
 
 
-console.log(validatePIN("1234"));
+validatePIN("1234");
