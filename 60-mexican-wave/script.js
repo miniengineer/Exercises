@@ -19,10 +19,7 @@ function wave(str) {
       result[currentIndex][currentIndex] = currentElement.toUpperCase();
     }
   });
-  result = result.map(element => {
-    element = element.join("");
-    return element;
-  });
+  result = result.map(e => e.join(""));
   return result;
 }
 
