@@ -11,10 +11,11 @@
 // Have fun!
 
 function asteriskIt(numbers) {
+  var result = [];
   if (typeof numbers === "string") {
-    var result = numbers.split("");
+    result = numbers.split("");
   } else {
-    var result = [...numbers];
+    result = [...numbers];
   }
   result.forEach(function(currentElement, currentIndex) {
     if (currentElement % 2 === 0 && result[currentIndex + 1] % 2 === 0) {
