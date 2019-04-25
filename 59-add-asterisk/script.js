@@ -12,15 +12,17 @@
 
 function asteriskIt(numbers) {
   if (typeof numbers === "string") {
-    numbers = numbers.split("");
+    var result = numbers.split("");
+  } else {
+    var result = [...numbers];
   }
-  numbers.forEach(function(currentElement, currentIndex) {
-    if (currentElement % 2 === 0 && numbers[currentIndex + 1] % 2 === 0) {
-      numbers.splice(currentIndex + 1,0,"*");
+  result.forEach(function(currentElement, currentIndex) {
+    if (currentElement % 2 === 0 && result[currentIndex + 1] % 2 === 0) {
+      result.splice(currentIndex + 1,0,"*");
     }
   });
-  numbers = numbers.join("");
-  return numbers;
+  result = result.join("");
+  return result;
 }
 
 
