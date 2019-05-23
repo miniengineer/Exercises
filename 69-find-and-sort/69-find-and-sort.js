@@ -30,12 +30,14 @@ var a2 = ["lively", "alive", "harp", "sharp", "armstrong"];
 
 
 const findAndSort = (array1,array2) => {
-  array2.forEach((element) => {
-    var currentElement = element;
-    return array1.filter((element) => {
-      return element.includes(currentElement);
-    });
-  });
+  return array1.reduce((accumulator,element) => {
+    for (var i = 0; i < array2.length; i++) {
+      if (array2[i].includes(element)) {
+        accumulator.push(element);
+      }
+    }
+    return accumulator;
+  }, []);
 }
 
 console.log(findAndSort(a1,a2));
