@@ -3,7 +3,7 @@
 function isUnique(word) {
   var letterCount = {};
   var result = true;
-  word.split("").forEach(function(letter) {
+  word.split("").forEach(letter => {
     if(letterCount[letter] == null) {
       letterCount[letter] = 1;
     } else {
@@ -13,4 +13,4 @@ function isUnique(word) {
   return result;
 }
 
-console.log(isUnique("minira"));
+isUnique("minira");
