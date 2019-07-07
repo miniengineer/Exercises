@@ -38,6 +38,6 @@ const findAndSort = (array1,array2) => {
     }
     return accumulator;
   }, []);
-}
+};
 
 console.log(findAndSort(a1,a2));
