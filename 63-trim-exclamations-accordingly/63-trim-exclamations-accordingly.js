@@ -12,11 +12,14 @@
 // Please don't post issue about difficulty or duplicate.
 
 
+
 function remove(string) {
   let words = string.split(" ");
   return words.map((word) => {
+    //find number of exclams before and after
     let start = word.match(/^[!]*/);
     let end = word.match(/[!]*$/);
+    //get rid of them accordingly
     if (start[0].length > end[0].length) {
       word = word.slice(start[0].length - end[0].length);
     } else if (start[0].length < end[0].length) {
@@ -24,7 +27,8 @@ function remove(string) {
     }
     return word;
   }).join(" ");
-}
+};
 
 
-console.log(remove("!!!!Hi!! Hi!! !Hi!!! !!!Hi"));
+
+remove("!!!!Hi!! Hi!! !Hi!!! !!!Hi");
