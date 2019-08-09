@@ -24,8 +24,7 @@ function remove(string) {
     }
     return word;
   }).join(" ");
-};
-
+}
 
 
 console.log(remove("!!!!Hi!! Hi!! !Hi!!! !!!Hi"));
