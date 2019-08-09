@@ -12,7 +12,6 @@
 // Please don't post issue about difficulty or duplicate.
 
 
-
 function remove(string) {
   let words = string.split(" ");
   return words.map((word) => {
@@ -27,8 +26,7 @@ function remove(string) {
     }
     return word;
   }).join(" ");
-};
-
+}
 
 
 remove("!!!!Hi!! Hi!! !Hi!!! !!!Hi");
