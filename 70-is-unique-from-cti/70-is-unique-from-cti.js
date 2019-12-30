@@ -8,11 +8,11 @@
 // Input : hutg9mnd!nk9
 // Output : false
 
-
+//eslint-disable-next-line no-unused-vars
 const isUnique = (str) => {
   let letter= {};
   let result = true;
-  const arr = str.split('');
+  const arr = str.split("");
   arr.forEach((character) => {
     if (!letter[character]) {
       letter[character] = character;
@@ -22,5 +22,5 @@ const isUnique = (str) => {
     }
   });
   return result;
-}
+};
 
