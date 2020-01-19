@@ -13,6 +13,7 @@
 // Dwarves: 3
 // Eagles: 4
 // Wizards: 10
+
 // On the side of evil we have:
 
 // Orcs: 1
@@ -47,3 +48,19 @@
 // "Battle Result: Evil eradicates all trace of Good" if evil wins,
 // or "Battle Result: No victor on this battle field" if it ends in a tie.
 
+//eslint-disable-next-line no-unused-vars
+const goodVsEvil = (good, evil) => {
+  const goodGuys = [1, 2, 3, 3, 4, 10];
+  const evilGuys = [1, 2, 2, 2, 3, 5, 10];
+
+  const goodScore = good.split(" ").reduce((acc, val, i) => {
+    acc += val * goodGuys[i];
+    return acc;
+  }, 0);
+  const evilScore = evil.split(" ").reduce((acc, val, i) => {
+    acc += val * evilGuys[i];
+    return acc;
+  }, 0);
+  return goodScore > evilScore ? "Battle Result: Good triumphs over Evil" :
+    goodScore < evilScore ? "Battle Result: Evil eradicates all trace of Good" : "Battle Result: No victor on this battle field";
+};
