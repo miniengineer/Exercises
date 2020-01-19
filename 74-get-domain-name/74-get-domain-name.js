@@ -10,6 +10,7 @@
 
 //eslint-disable-next-line no-unused-vars
 const domainName = (url) => {
+  //eslint-disable-next-line no-useless-escape
   return url.match(/^(?:https{0,1}:\/\/){0,1}(?:www\.){0,1}([^\.]+)/)[1].toString();
 };
 
